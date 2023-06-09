@@ -1,0 +1,32 @@
+# put here your custom config value
+menu "Example Configuration"
+config ESP_WIFI_SSID
+    string "WiFi SSID"
+    default "myssid"
+    help
+	SSID (network name) for the example to connect to.
+
+config ESP_WIFI_PASSWORD
+    string "WiFi Password"
+    default "mypassword"
+    help
+	WiFi password (WPA or WPA2) for the example to use.
+	
+	menu "BLE Mesh Configuration"
+
+		choice BLE_MESH_EXAMPLE_BOARD
+			prompt "Board selection for BLE Mesh"
+			default BLE_MESH_ESP_WROOM_32
+			help
+				Select this option to choose the board for BLE Mesh. The default is ESP32-WROOM-32
+
+			config BLE_MESH_ESP_WROOM_32
+				bool "ESP32-WROOM-32"
+
+			config BLE_MESH_ESP_WROVER
+				bool "ESP32-WROVER"
+		endchoice
+
+	endmenu
+	
+endmenu

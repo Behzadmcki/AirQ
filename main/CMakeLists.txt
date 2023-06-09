@@ -1,0 +1,2 @@
+idf_component_register(SRCS "main.c" "VOCSensor/VOC.c" "Co2Sensor/co2.c" "LaserDustSensor/pmX.c" "InternalStorage/internalStorage.c" "MainTask/mainTask.c" "TimeSchedule/timeSchedule.c" "TempAndHum/TempAndHum.c" "BLEMesh/bleMeshServer.c" "Board/board.c" "WifiStation/httpServer.c" "UI/UserInterface.c"
+					   INCLUDE_DIRS "." "VOCSensor" "Co2Sensor" "LaserDustSensor" "InternalStorage" "MainTask" "TimeSchedule" "TempAndHum" "bleMesh" "Board" "WifiStation" "UI")
